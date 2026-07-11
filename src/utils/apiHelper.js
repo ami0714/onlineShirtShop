@@ -2,21 +2,24 @@
 export async function apiRequest(endpoint, data = {}, token = null) {
   const BASE_URL = import.meta.env.VITE_BASE_URL;
 
-
   const headers = {};
 
  
-  // Jika data ialah objek biasa,set application/json macam biasa.
-  if (!(data instanceof FormData)) { //jika bukan formdata maka header akan jadi itu,jika bukan maka tiada header itu
+  headers['ngrok-skip-browser-warning'] = '69420';
+
+  // Jika data ialah objek biasa, set application/json macam biasa.
+  if (!(data instanceof FormData)) { 
+    // Jika bukan formdata maka header akan jadi itu, jika bukan maka tiada header itu
     headers['Content-Type'] = 'application/json';
   }
 
   if (token) {
-    headers['Authorization'] = `Bearer ${token}`;//jika ada token makan akan header itu ada
+    // Jika ada token maka akan header itu ada
+    headers['Authorization'] = `Bearer ${token}`;
   }
 
-  
-  const bodyData = data instanceof FormData ? data : JSON.stringify(data); //jika data adalah formdata maa terus hantar data jika bukan akan hantar json
+  // Jika data adalah formdata maka terus hantar data, jika bukan akan hantar json
+  const bodyData = data instanceof FormData ? data : JSON.stringify(data); 
 
   const response = await fetch(`${BASE_URL}${endpoint}`, {
     method: 'POST',
