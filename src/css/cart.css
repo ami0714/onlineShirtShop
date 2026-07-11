@@ -1,0 +1,302 @@
+/* CartPage.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.cart-wrapper {
+  padding: 20px 20px 120px 20px; /* Ruang di bawah untuk bottom bar */
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+.cart-header-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.back-arrow {
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+  background: none;
+  border: none;
+}
+
+.back-arrow:hover {
+  transform: translateX(-5px);
+}
+
+
+.cart-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --- Item Card --- */
+.cart-item {
+  background-color: #000000;
+  border-radius: 24px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.item-img-wrapper {
+  background-color: #ffffff;
+  border-radius: 16px;
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.item-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-info {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.item-name {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.item-price {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+/* --- Controls Row (Size, Color, Quantity) --- */
+.item-variants {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.variants-pill {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 50px;
+  padding: 4px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.variants-pill .value-circle {
+  border: 1px solid #000000;
+  border-radius: 50%;
+  padding: 0 8px;
+  line-height: 1.6;
+  min-width: 20px;
+  text-align: center;
+}
+
+.variants-pill .label {
+  text-transform: lowercase;
+}
+
+.variants-pill .label-upper {
+  text-transform: uppercase;
+}
+
+.variants-pill svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+
+/* --- Trash Icon --- */
+.trash-icon {
+  margin-left: 10px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.trash-icon:hover {
+  transform: scale(1.05);
+}
+
+.trash-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: #ffffff;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* --- Bottom Checkout Bar --- */
+.bottom-checkout-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 24px 24px 0 0;
+  z-index: 100;
+}
+
+.total-text {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.checkout-btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 45px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.checkout-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* --- Quantity Controls (+/-) --- */
+.quantity-controls input {
+  -webkit-appearance: none;
+  -moz-appearance: textfield; /* Firefox */
+  appearance: none;
+
+  /* Ukuran & padding */
+  width: 100%;
+  max-width: 50px;
+  padding: 3px 5px;
+  font-size: 16px;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #fafafa;
+ 
+  outline: none;
+
+
+  color: #1e1e2f;
+
+}
+
+
+.qty-btn {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.qty-btn:hover {
+  background-color: #333333;
+  transform: scale(1.05);
+}
+
+.qty-btn:active {
+  transform: scale(0.95);
+}
+
+/* --- Color--- */
+.variants-pill .color-value {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+}
+
+
+
+
+/* --- Responsive Mobile --- */
+@media (max-width: 600px) {
+  .cart-item {
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+  
+  .item-info {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 15px;
+  }
+  
+  .item-img-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .item-controls {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .bottom-checkout-bar {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 0; /* Flat pada mobile */
+  }
+  
+  .checkout-btn {
+    width: 100%;
+  }
+}

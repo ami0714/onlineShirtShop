@@ -1,0 +1,128 @@
+/* ReceiptPage.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.receipt-wrapper {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* --- Main Card --- */
+.receipt-card {
+  width: 100%;
+  max-width: 600px;
+  border: 2px solid #000000;
+  border-radius: 24px;
+  padding: 40px 35px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.receipt-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- Status Badge --- */
+.status-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.status-badge {
+  padding: 8px 30px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-success {
+  background-color: #d5f5e3; /* Hijau muda */
+  color: #145a32;
+  border: 1px solid #82e0aa;
+}
+
+.status-failed {
+  background-color: #fadbd8; /* Merah muda */
+  color: #922b21;
+  border: 1px solid #f5b7b1;
+}
+
+/* --- Detail Rows --- */
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px 0;
+  border-top: 2px solid #e5e7eb;
+  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 20px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #555555;
+}
+
+.detail-value {
+  font-weight: 700;
+  color: #000000;
+  text-align: right;
+}
+
+/* Order ID menggunakan font yang lebih besar mengikut design biasa */
+.detail-row.order-row .detail-value {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* --- Footer Note --- */
+.receipt-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #777777;
+  margin-top: 10px;
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 500px) {
+  .receipt-card {
+    padding: 25px 20px;
+  }
+  .detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .detail-value {
+    text-align: left;
+    width: 100%;
+  }
+  .receipt-title {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,182 @@
+/* ProductDetail.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.product-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.product-detail-container {
+  width: 100%;
+  max-width: 1300px;
+  width: 100%;
+  position: relative;
+}
+
+/* --- Back Button) --- */
+.back-btn {
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding-left: 5px;
+  transition: transform 0.2s;
+}
+
+.back-btn:hover {
+  transform: translateX(-5px);
+}
+
+/* --- Main Card Content --- */
+.product-card {
+  border: 2px solid #000000;
+  border-radius: 25px;
+  padding: 40px;
+  display: flex;
+  gap: 50px;
+  position: relative;
+  background-color: #ffffff;
+}
+
+/* Left: Product Image */
+.product-image-wrapper {
+  flex: 1;
+  max-width: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.product-image-wrapper img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* Right: Product Details */
+.product-details {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 10px;
+}
+
+.product-title {
+  font-size: 34px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-price {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.product-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+/* --- Option Labels --- */
+.option-label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+/* --- Size & Color Options --- */
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 5px;
+}
+
+.option-btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+/* Apabila dipilih (IsSelected = true) - Latar Hitam, Tulisan Putih */
+.option-btn.active {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+.option-btn:hover:not(.active) {
+  background-color: #f5f5f5;
+}
+
+/* --- Add to Cart Button --- */
+.btn-add-cart {
+  position: absolute;
+  bottom: 35px;
+  right: 40px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 16px 30px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-add-cart:hover {
+  background-color: #333333;
+}
+
+.btn-add-cart:active {
+  transform: scale(0.95);
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 768px) {
+  .product-card {
+    flex-direction: column;
+    padding: 25px;
+    gap: 20px;
+    padding-bottom: 100px; /* Ruang untuk butang Add To Cart di bawah */
+  }
+  
+  .product-image-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .btn-add-cart {
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 80%;
+    text-align: center;
+  }
+}

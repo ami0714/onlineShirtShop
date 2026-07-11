@@ -1,0 +1,169 @@
+/* AdminOrderSummary.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.admin-summary-wrapper {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.main-card {
+  width: 100%;
+  max-width: 850px;
+  border: 1px solid #d1d5db;
+  border-radius: 24px;
+  padding: 30px 35px;
+  background-color: #ffffff;
+}
+
+.order-id-title {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+/* --- Recipient Section --- */
+.recipient-section {
+  background-color: #f9fafb;
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.recipient-section h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.recipient-detail {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 4px;
+}
+
+.recipient-detail span {
+  font-weight: 400;
+}
+
+.copy-icon {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: opacity 0.2s;
+}
+
+.copy-icon:hover {
+  opacity: 0.6;
+}
+
+.copy-icon svg {
+  width: 16px;
+  height: 16px;
+  stroke: #000;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* --- Items Table Section --- */
+.items-table-wrapper {
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  margin-bottom: 25px;
+  background-color: #ffffff;
+}
+.items-table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+.items-header {
+  display: grid;
+  grid-template-columns: 2.5fr 2fr 1fr 1fr;
+  background-color: #d1d5db; /* Kelabu lebih gelap seperti gambar */
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.items-header div:first-child {
+  text-align: center; /* Dijajarkan tengah untuk header */
+}
+
+.item-row {
+  display: grid;
+  grid-template-columns: 2.5fr 2fr 1fr 1fr;
+  padding: 16px 20px;
+  border-bottom: 1px solid #000000; /* Garisan hitam tebal antara item */
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.item-row:last-child {
+  border-bottom: none;
+}
+
+.item-name {
+  text-align: left;
+  padding-left: 10px; /* Sedikit offset agar selaras */
+}
+
+/* --- Summary Section --- */
+.summary-section {
+  margin-top: 10px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 6px 0;
+}
+
+.thick-line {
+  border-top: 3px solid #000000;
+  margin: 10px 0;
+}
+
+.grand-total {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 26px;
+  font-weight: 800;
+  margin: 12px 0 0 0;
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 600px) {
+  .main-card {
+    padding: 20px;
+  }
+  .items-header, .item-row {
+    grid-template-columns: 1.5fr 1.2fr 0.8fr 0.8fr;
+    font-size: 12px;
+    padding: 12px 10px;
+  }
+  .summary-row {
+    font-size: 16px;
+  }
+  .grand-total {
+    font-size: 20px;
+  }
+}
