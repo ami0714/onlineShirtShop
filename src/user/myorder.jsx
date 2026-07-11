@@ -1,7 +1,7 @@
 // MyOrder.jsx
 import React from 'react';
-import '../css/MyOrder.css';
-import Navbar from '../components/Navbar';
+import '../css/myOrder.css';
+import Navbar from '../components/navbar.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from "react-router-dom";

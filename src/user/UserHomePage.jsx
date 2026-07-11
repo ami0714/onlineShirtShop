@@ -1,6 +1,6 @@
 // HomePage.jsx
 import React, { useState, useEffect } from 'react';
-import Navbar from '../components/Navbar.jsx';
+import Navbar from '../components/navbar.jsx';
 import '../components/UserHomePage.css'
 import {useProductHomeUser} from '../controller/ProductController'
 import { motion } from 'framer-motion';

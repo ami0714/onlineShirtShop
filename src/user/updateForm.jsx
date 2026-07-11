@@ -1,7 +1,7 @@
 // UpdateProfile.jsx
 import React, { useState,useEffect } from 'react';
-import '../css/UpdateProfile.css';
-import Navbar from '../components/Navbar.jsx';
+import '../css/updateProfile.css';
+import Navbar from '../components/navbar.jsx';
 import {useUserData} from '../controller/userController'
 import{useNavigate} from 'react-router-dom'
 

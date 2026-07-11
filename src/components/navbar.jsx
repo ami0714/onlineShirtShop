@@ -1,6 +1,6 @@
 // Navbar.jsx
 import React from 'react';
-import '../components/Navbar.css';
+import './navbar.css';
 import {motion} from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';

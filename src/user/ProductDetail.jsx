@@ -1,7 +1,7 @@
 // ProductDetail.jsx
 import React, { useState } from 'react';
 import '../css/ProductDetail.css';
-import Navbar from '../components/Navbar.jsx';
+import Navbar from '../components/navbar.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { useParams } from "react-router-dom";
