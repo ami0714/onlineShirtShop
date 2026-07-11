@@ -5,7 +5,7 @@ export async function apiRequest(endpoint, data = {}, token = null) {
   const headers = {};
 
  
-  headers['ngrok-skip-browser-warning'] = 'true';
+  headers['ngrok-skip-browser-warning'] = '69420';
 
   // Jika data ialah objek biasa, set application/json macam biasa.
   if (!(data instanceof FormData)) { 
